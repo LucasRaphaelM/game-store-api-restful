@@ -1,0 +1,40 @@
+# Build results
+**/bin/
+**/obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+
+# Rider
+.idea/
+
+# Visual Studio
+.vs/
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Dotnet artifacts
+*.dbmdl
+*.pdb
+
+# Secrets (se você usar dotenv ou similar)
+.env
+
+# HTTP files (test requests)
+*.http
+
+# Ignore migrations snapshots (opcional, se você preferir não versionar eles)
+# **/*ModelSnapshot.cs
+**/Migrations/
