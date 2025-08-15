@@ -8,5 +8,5 @@ public class CreatePedidoDto
     public int ContaId { get; set; }
 
     [Required]
-    public int KeyId { get; set; }
+    public int JogoId { get; set; }
 }

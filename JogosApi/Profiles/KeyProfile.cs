@@ -13,6 +13,8 @@ public class KeyProfile : Profile
         CreateMap<Key, ReadKeyDto>()
             .ForMember(key => key.JogoNome,
             opt => opt.MapFrom(key => key.Jogo.Titulo))
+            .ForMember(key => key.JogoDesenvolvedora,
+            opt => opt.MapFrom(key =>key.Jogo.Desenvolvedora))
             .ForMember(key => key.JogoPic,
             opt => opt.MapFrom(key => key.Jogo.Foto));
     }

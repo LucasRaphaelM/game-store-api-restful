@@ -117,6 +117,7 @@ public class UsuarioController : ControllerBase
                         JogoNome = pedido.Key.Jogo.Titulo,
                         JogoId = pedido.Key.Jogo.Id,
                         JogoPic = pedido.Key.Jogo.Foto,
+                        JogoDesenvolvedora = pedido.Key.Jogo.Desenvolvedora,
                     }
                 }).ToList()
             }

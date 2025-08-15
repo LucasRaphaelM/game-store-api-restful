@@ -23,7 +23,7 @@ public class PedidoController : ControllerBase
     [HttpPost]
     public IActionResult CriarPedido([FromBody] CreatePedidoDto pedidoDto)
     {
-        Key key = _context.Keys.FirstOrDefault(key => key.Id == pedidoDto.KeyId);
+        Key key = _context.Keys.FirstOrDefault(key => key.Disponibilidade && key.JogoId == pedidoDto.JogoId);
         Conta conta = _context.Contas.FirstOrDefault(conta => conta.Id == pedidoDto.ContaId);
 
         if (key == null || !key.Disponibilidade || conta == null)
@@ -31,9 +31,14 @@ public class PedidoController : ControllerBase
             return BadRequest("Key ou conta inválida, ou já foi vendida.");
         }
 
-        Pedido pedido = _mapper.Map<Pedido>(pedidoDto);
-        pedido.DataCompra = DateTime.Now;
-
+        Pedido pedido = new Pedido
+        {
+            ContaId = conta.Id,
+            Conta = conta,
+            KeyId = key.Id,
+            Key = key,
+            DataCompra = DateTime.Now
+        };
         key.Disponibilidade = false;
 
         _context.Add(pedido);

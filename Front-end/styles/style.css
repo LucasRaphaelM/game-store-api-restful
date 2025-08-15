@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0%;
+}
+
+.header-class {
+    width: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.80);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(12.7px);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    z-index: 1;
+}
+
+.lista-itens-header {
+    padding: 1% 0 1% 0;
+    padding-right: 2%;
+    display: flex;
+    justify-content: right;
+    gap: 10%;
+}
+
+.loja-biblioteca {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.5vw;
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.loja-biblioteca:hover {
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.username-header {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.5vw;
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+#logout-btn {
+    align-self: flex-start;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.5vw;
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+#logout-btn:hover {
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.teste {
+    font-size: 10vw;
+}
+
+.main-section {
+    background: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.games-em-destaque {
+    width: 100%;
+    height: 75vh;
+    background: rgb(56, 1, 1);
+    text-align: center;
+    align-content: center;
+}
+
+#games-cards {
+    background: #00d4ff;
+    background: linear-gradient(45deg, rgb(118, 0, 165) 0%, rgb(0, 0, 179) 100%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: start;
+    gap: 3%;
+    flex-wrap: wrap;
+}
+.card-body {
+    position: relative;
+    margin: 3% 0% 0% 0%;
+    width: 15%;
+    transition: all 0.3s ease;
+}
+
+.card-body:hover{
+    width: 20%;
+}
+
+.card-body:hover .game-card-developer{
+    font-size: 1.3vw;
+}
+
+.card-body:hover .game-card-name{
+    font-size: 2vw;
+}
+
+.card-body:hover .button-add-cart-text {
+    font-size: 1.3vw;
+}
+
+.card-body:hover .card-body-cart-img {
+    width: 2vw;
+}
+
+.card-body-img {
+    width: 100%;
+    border-radius: 5%;
+    box-shadow: rgba(100, 100, 111, 0.6) 0px 7px 29px 0px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card-body-img:hover {
+    box-shadow: rgba(50, 50, 93, 0.8) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+
+.card-body-infos {
+    width: 100%;
+    box-sizing: content-box;
+    position: absolute;
+    bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+}
+
+.game-card-name {
+    width: 100%;
+    padding: 0 0 0 5%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.5vw;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px #0e0e0e,
+                 0 0 1em #0e0e0e,
+                 0 0 0.2em #0e0e0e;
+}
+
+.game-card-developer {
+    width: 100%;
+    padding: 0 0 3% 5%;
+    color: #e0e0e0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1vw;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px #0e0e0e,
+                 0 0 1em #0e0e0e,
+                 0 0 0.2em #0e0e0e;
+}
+
+.button-add-cart {
+    position: relative;
+    width: 50%;
+    left: 24%;
+    border: solid 2px rgb(5, 201, 93);
+    background: rgba(144, 245, 189, 0.4);
+    border-radius: 0.5vw;
+    padding: 3% 0%;
+    transition: all 0.3s ease;
+}
+
+.button-add-cart-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    text-decoration: none;
+    color: #0e0e0e;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 1vw;
+    transition: all 0.3s ease;
+}
+
+.button-add-cart:hover {
+    background: rgb(5, 201, 93);
+    width: 90%;
+    left: 4%;
+    border-radius: 0.8vw;
+    box-shadow: 1px 1px 2px rgb(5, 201, 93),
+                 0 0 1em rgb(5, 201, 93),
+                 0 0 0.2em rgb(5, 201, 93);
+}
+.card-body-cart-img {
+    width: 1.5vw;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px #e0e0e0,
+                 0 0 1em #e0e0e0,
+                 0 0 0.2em #e0e0e0;
+}

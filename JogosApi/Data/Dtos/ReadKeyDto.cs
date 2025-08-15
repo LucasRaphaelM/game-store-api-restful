@@ -13,5 +13,7 @@ public class ReadKeyDto
 
     public string JogoNome { get; set; }
 
+    public string JogoDesenvolvedora { get; set; }
+
     public string JogoPic { get; set; }
 }
